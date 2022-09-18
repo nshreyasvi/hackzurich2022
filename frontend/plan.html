@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ConGreat</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <script src="assets/jquery-3.6.1.min.js"></script>
+
+                <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <script src="assets/sweetalert2@11.js"></script>
+
+        <script>
+            function sendAjax(data) {
+                console.log(data);
+                $.ajax({
+                    url: "",
+                    method: "POST",
+                    data: data,
+                    }).done(function(result) {
+                        Swal.fire({
+                            title: 'Pouring data',
+                            html: '<div class="swal2-html-container row justify-content-center" id="swal2-html-container" style="display: block;">' +
+                                '<table class="table"><tr><th>Start</th><th>End</th></tr><tr><td>test</td><td>test</td></tr></table>' +
+                               '</div>',
+                            icon: 'success',
+                            confirmButtonText: 'Ok'
+                        });
+                });
+            }
+
+            $(document).ready(function() {
+                $('#file-form').submit(function() {
+                    sendAjax($(this).serialize());
+
+                    Swal.fire({
+                            title: 'Pouring data',
+                            html: '<div class="swal2-html-container row justify-content-center" id="swal2-html-container" style="display: block;">' +
+                                '<table class="table"><tr><th>Start</th><th>End</th></tr><tr><td>test</td><td>test</td></tr></table>' +
+                               '</div>',
+                            icon: 'success',
+                            confirmButtonText: 'Ok'
+                        });
+
+                    return false;
+                });
+
+                $('#manual-form').submit(function() {
+                    sendAjax($(this).serialize());
+
+                    Swal.fire({
+                            title: 'Pouring data',
+                            html: '<div class="swal2-html-container row justify-content-center" id="swal2-html-container" style="display: block;">' +
+                                '<table class="table"><tr><th>Start</th><th>End</th></tr><tr><td>test</td><td>test</td></tr></table>' +
+                               '</div>',
+                            icon: 'success',
+                            confirmButtonText: 'Ok'
+                        });
+
+                    return false;
+                });
+            });
+
+        </script>
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">ConGreat</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#plan">Plan</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="plan-page-section text-center" id="plan">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center"></div>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Plan and calculate the cement hardening time</h2>
+                        <div class="container">
+                            <h3 class="text-white mb-4">...by manually providing the data</h3>
+                            <form action="" method="POST" id="manual-form">
+                              <div class="form-group">
+                                <label for="time" class="text-white">Date of first batsch of pouring:</label>
+                                <input type="datetime-local" class="form-control" id="time" placeholder="Enter time" name="time" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="number-of-pours" class="text-white">Number of pours:</label>
+                                <input type="number" class="form-control" id="number-of-pours" placeholder="Enter number of pours" name="number-of-pours" min="0" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="hardening-index" class="text-white">Desired hardening index:</label>
+                                <input type="number" class="form-control" id="hardening-index" placeholder="Enter hardening index" name="hardening-index" min="0" required>
+                              </div>
+                              <button type="submit" class="btn btn-primary">Calculate</button>
+                            </form>
+                          </div>
+
+                          <div class="container">
+                            <h3 class="text-white mb-4 mt-4">...by uploading a file</h3>
+                            <form id="file-form">
+                              <div class="form-group">
+                                <label for="time" class="text-white">JSON file:</label>
+                                <input type="file" class="form-control" id="file" placeholder="Add file" name="file" required>
+                              </div>
+                              <button type="submit" class="btn btn-primary">Calculate</button>
+                            </form>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>

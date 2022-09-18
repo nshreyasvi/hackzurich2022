@@ -1,0 +1,7 @@
+﻿material_description,quantity,units_of_measure,manufacturer,source,material_type
+CEM1 (Santander),220,kg/m3,,Santander,Binder (cement)
+GGBS,220,kg/m3,Holcim,Bremen,Binder (slag)
+Sand 0/4,803.86,kg/m3,Hanson,Dagenham,Aggregate
+4/20 limestone,1017.96,kg/m3,,Torr,Aggregate
+Water,152.56,l/m3,,,Water
+Masterglenium 1966,1.98,l/m3,BASF,,Admixture

@@ -1,0 +1,8 @@
+﻿property_description,value,units_of_measure
+strength grade,C32/40,
+strength at 28 days (cylinder),32,MPa
+strength at 28 days (cube),40,MPa
+slump class,S4,
+water/cement ratio,0.445,
+aggregate/cement ratio,4.438,
+Embodied carbon estimate,226.94,kg/m3

@@ -1,0 +1,9 @@
+﻿material_description,quantity,units_of_measure,manufacturer,source,material_type
+CEM1,266,kg/m3,,Platin,Binder (cement)
+GGBS,114,kg/m3,,Tudela,Binder (slag)
+Marine Gravel 10/20,676,kg/m3,,Greenwich,Aggregate
+Marine Gravel 4/10,288,kg/m3,,Greenwich,Aggregate
+Marine Sand,858,kg/m3,,Greenwich,Aggregate
+Omega 176R,3.424,kg/m3,Chryso,,Admixture
+MSRS10,0.35,kg/m3,BASF,,Admixture
+Water,180,l/m3,,,Water

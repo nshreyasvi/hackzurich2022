@@ -1,0 +1,7 @@
+﻿material_description,quantity,units_of_measure,manufacturer,source,material_type
+CEM1,192,kg/m3,Paragon,Lagerdorf,Binder (cement)
+GGBS,208,kg/m3,Hanson,Purfleet,Binder (slag)
+4/20 graded limestone,1013,kg/m3,Foster Yeoman,Torr,Aggregate
+0/4 sand,846,kg/m3,Aggregate Industries,Demi/Torr,Aggregate
+Master Glenium Sky 1901,1.6,l/m3,BASF,Manchester,Admixture
+Water,182,l/m3,,,Water
