@@ -19,6 +19,7 @@ from datetime import datetime, timedelta
 st.header('ConGreat')
 st.subheader('ConGreat is an online tool to predict time duration within which a pour can be carried out. The tool provides custom models for better planning and management of pouring practice in contruction site. We take into account weather and strength datasets from different sites to estimate ideal pouring time.')
 st.caption('In case if the results show NaN values or ValueError, the weather data for that particular day/location was not available in the open source repository that we were using. However, this can be easily fixed by changing the weather forecast provider.')
+st.caption('Please copy paste the latitude and longitude of cities through google search and retrain model')
 st.caption('Please refresh the page after each run to avoid issues')
 
 lat = st.number_input('Enter the Latitude', value = 51.5072)
